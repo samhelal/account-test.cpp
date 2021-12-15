@@ -9,7 +9,7 @@ member function Modify class (Fig. 3.9) to test AccountTest withdraw
 //account test
 //displayin account name and balance and updating acount info
 #include <iostream>
-#include "account.h"
+#include "account-test.h"
 using namespace std ;
 
 int main () {
@@ -20,10 +20,10 @@ int main () {
     cout << " please enter withdraw amount : "  ;
     int withdrawAmount (0) , depositeAmount(0) ;
     cin >> withdrawAmount ;
-    if(account1.getBalance()<withdrawAmount){      // to make sure the withdraw amount does not exceed the balance 
-    cout << " Withdrawal amount exceeded account balance." ;
+    if(withdrawAmount>account1.getBalance()){      // to make sure the withdraw amount does not exceed the balance 
+    cout << " Withdrawal amount exceeded account balance.\n" ;
     }
-    if (account1.getBalance()>=withdrawAmount){   // to make sure the withdraw amount does not exceed the balance 
+    if (withdrawAmount<=account1.getBalance()){   // to make sure the withdraw amount does not exceed the balance 
     account1.withdraw(withdrawAmount) ;
     }
     cout << account1.getName() << account1.getBalance()<< endl ;
