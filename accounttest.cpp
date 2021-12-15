@@ -20,10 +20,10 @@ int main () {
     cout << " please enter withdraw amount : "  ;
     int withdrawAmount (0) , depositeAmount(0) ;
     cin >> withdrawAmount ;
-    if(account1.getBalance()<withdrawAmount){
+    if(account1.getBalance()<withdrawAmount){      // to make sure the withdraw amount does not exceed the balance 
     cout << " Withdrawal amount exceeded account balance." ;
     }
-    if (account1.getBalance()>=withdrawAmount){
+    if (account1.getBalance()>=withdrawAmount){   // to make sure the withdraw amount does not exceed the balance 
     account1.withdraw(withdrawAmount) ;
     }
     cout << account1.getName() << account1.getBalance()<< endl ;
